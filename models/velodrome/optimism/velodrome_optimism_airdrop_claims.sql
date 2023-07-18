@@ -1,6 +1,7 @@
 {{
     config(
-        alias='airdrop_claims',
+        schema = 'velodrome_ethereum',
+        alias = alias('airdrop_claims'),
         materialized = 'incremental',
         file_format = 'delta',
         incremental_strategy = 'merge',

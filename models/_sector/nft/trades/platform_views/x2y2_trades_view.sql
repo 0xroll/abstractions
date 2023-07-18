@@ -1,11 +1,11 @@
 
 {{ config(
         schema = 'x2y2',
-        alias ='trades',
+        alias = alias('trades'),
         materialized = 'view',
         post_hook='{{ expose_spells(\'["ethereum"]\',
-                                    "sector",
-                                    "nft",
+                                    "project",
+                                    "x2y2",
                                     \'["0xRob"]\') }}')
 }}
 

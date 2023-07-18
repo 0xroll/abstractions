@@ -1,6 +1,7 @@
 {{
     config(
-        alias='airdrop_claims',
+        schema = 'pangolin_avalanche_c',
+        alias = alias('airdrop_claims'),
         materialized = 'table',
         file_format = 'delta',
         tags=['static'],

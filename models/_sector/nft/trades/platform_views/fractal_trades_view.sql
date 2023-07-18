@@ -1,11 +1,11 @@
 
 {{ config(
         schema = 'fractal',
-        alias ='trades',
+        alias = alias('trades'),
         materialized = 'view',
         post_hook='{{ expose_spells(\'["polygon"]\',
-                                    "sector",
-                                    "nft",
+                                    "project",
+                                    "fractal",
                                     \'["0xRob"]\') }}')
 }}
 

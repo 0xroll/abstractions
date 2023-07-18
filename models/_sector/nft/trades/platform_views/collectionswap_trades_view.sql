@@ -1,11 +1,11 @@
 
 {{ config(
         schema = 'collectionswap',
-        alias ='trades',
+        alias = alias('trades'),
         materialized = 'view',
         post_hook='{{ expose_spells(\'["ethereum"]\',
-                                    "sector",
-                                    "nft",
+                                    "project",
+                                    "collectionswap",
                                     \'["0xRob"]\') }}')
 }}
 

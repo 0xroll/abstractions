@@ -1,11 +1,11 @@
 
 {{ config(
         schema = 'zonic',
-        alias ='trades',
+        alias = alias('trades'),
         materialized = 'view',
         post_hook='{{ expose_spells(\'["optimism"]\',
-                                    "sector",
-                                    "nft",
+                                    "project",
+                                    "zonic",
                                     \'["0xRob"]\') }}')
 }}
 

@@ -1,11 +1,11 @@
 
 {{ config(
         schema = 'sudoswap',
-        alias ='trades',
+        alias = alias('trades'),
         materialized = 'view',
         post_hook='{{ expose_spells(\'["ethereum"]\',
-                                    "sector",
-                                    "nft",
+                                    "project",
+                                    "sudoswap",
                                     \'["0xRob"]\') }}')
 }}
 

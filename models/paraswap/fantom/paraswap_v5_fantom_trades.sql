@@ -1,6 +1,6 @@
 {{ config(
     schema = 'paraswap_v5_fantom',
-    alias = 'trades',
+    alias = alias('trades'),
     partition_by = ['block_date'],
     materialized = 'incremental',
     file_format = 'delta',
@@ -13,7 +13,7 @@
     )
 }}
 
-{% set project_start_date = '2022-06-15' %} -- min(evet_block_time) in bought & swapped events
+{% set project_start_date = '2022-01-21' %} -- min(evet_block_time) in bought & swapped events
 
 WITH 
 

@@ -1,11 +1,11 @@
 
 {{ config(
         schema = 'stealcam',
-        alias ='trades',
+        alias = alias('trades'),
         materialized = 'view',
         post_hook='{{ expose_spells(\'["arbitrum"]\',
-                                    "sector",
-                                    "nft",
+                                    "project",
+                                    "stealcam",
                                     \'["0xRob"]\') }}')
 }}
 

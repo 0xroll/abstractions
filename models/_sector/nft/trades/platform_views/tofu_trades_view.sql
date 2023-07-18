@@ -1,11 +1,11 @@
 
 {{ config(
         schema = 'tofu',
-        alias ='trades',
+        alias = alias('trades'),
         materialized = 'view',
         post_hook='{{ expose_spells(\'["optimism", "arbitrum", "polygon", "bnb"]\',
-                                    "sector",
-                                    "nft",
+                                    "project",
+                                    "tofu",
                                     \'["0xRob"]\') }}')
 }}
 

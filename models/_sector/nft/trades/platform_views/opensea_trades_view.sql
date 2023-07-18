@@ -1,11 +1,11 @@
 
 {{ config(
         schema = 'opensea',
-        alias ='trades',
+        alias = alias('trades'),
         materialized = 'view',
         post_hook='{{ expose_spells(\'["ethereum", "solana", "polygon"]\',
-                                    "sector",
-                                    "nft",
+                                    "project",
+                                    "opensea",
                                     \'["0xRob"]\') }}')
 }}
 

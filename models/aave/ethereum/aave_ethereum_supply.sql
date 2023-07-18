@@ -1,9 +1,9 @@
 {{ config(
-      alias='supply'
+      alias = alias('supply')
       , post_hook='{{ expose_spells(\'["ethereum"]\',
                                   "project",
                                   "aave",
-                                  \'["batwayne", "chuxin"]\') }}'
+                                  \'["batwayne", "chuxin", "hildobby"]\') }}'
   )
 }}
 

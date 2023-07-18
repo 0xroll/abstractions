@@ -1,11 +1,11 @@
 
 {{ config(
         schema = 'nftrade',
-        alias ='trades',
+        alias = alias('trades'),
         materialized = 'view',
         post_hook='{{ expose_spells(\'["bnb"]\',
-                                    "sector",
-                                    "nft",
+                                    "project",
+                                    "nftrade",
                                     \'["0xRob"]\') }}')
 }}
 
